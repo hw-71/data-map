@@ -76,7 +76,7 @@ export default function OutGovSchemaPage() {
           </div>
         )}
 
-        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Active Tables</h2>
+        <h2 className="text-2xl font-semibold text-gray-800 mb-4">Active Tables</h2>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mb-12">
           {loading ? (
             Array.from({ length: 6 }).map((_, index) => <SkeletonCard key={index} />)
@@ -106,7 +106,7 @@ export default function OutGovSchemaPage() {
 
         {!loading && tablesWithZeroRows.length > 0 && (
           <>
-            <h2 class="text-2xl font-semibold text-gray-800 mb-2">Tables with Zero Rows (Needs Review)</h2>
+            <h2 className="text-2xl font-semibold text-gray-800 mb-2">Tables with Zero Rows (Needs Review)</h2>
             <p className="text-sm text-gray-500 mb-4">
               이 테이블들의 행 개수가 0으로 표시되는 것은 여러 이유가 있을 수 있습니다. 테이블이 최근에 생성되었거나 데이터 변경이 자주 발생하지 않는 경우, 데이터베이스 시스템의 통계 정보가 아직 업데이트되지 않았을 수 있습니다. 이는 성능을 위해 실제 데이터를 매번 검사하지 않기 때문에 발생하는 정상적인 현상일 수 있습니다. 만약 데이터가 확실히 존재하는데도 0으로 표시된다면, 데이터 팀에 문의하여 통계 정보 수동 업데이트를 요청할 수 있습니다.
             </p>
