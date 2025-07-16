@@ -16,8 +16,7 @@ website is going to be the representation of the DB, but better in readability a
 who are not familiar with technology or data.
 
 ### Cautions
-- authentication: As the website is going to show the kinds of data we have, only authenticated users should be
-  allowed to access. 
+- authentication: As the website is going to show the kinds of data we have, only authenticated users should be allowed to access. 
 
 # Plan
 
@@ -59,3 +58,5 @@ who are not familiar with technology or data.
 # Instructions
 - When I ask questions, always explain in plain words first. Do not dump code implementation straight away if not asked.
 - Ask questions if you feel like you don't have enough information to move.
+- Ensure the codes you write are clean, readable, and in accordance with best practices.
+- Write commit messages in Korean.
