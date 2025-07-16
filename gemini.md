@@ -1,4 +1,4 @@
-# Overview
+# Project Overview
 
 ### Context</br>
 
@@ -15,8 +15,20 @@ data or how much of data we have, as only a few employees have access to the DB 
 website is going to be the representation of the DB, but better in readability and easier to understand, even for those
 who are not familiar with technology or data.
 
-### Cautions
+### Caveats
 - authentication: As the website is going to show the kinds of data we have, only authenticated users should be allowed to access. 
+
+<br/><br/>
+<hr>
+
+# Instructions
+- When I ask questions, always explain in plain words first. Do not dump code implementation straight away if not asked.
+- Ask questions if you feel like you don't have enough information to move.
+- Ensure the codes you write are clean, readable, and in accordance with best practices.
+- Write commit messages in Korean.
+
+<br/><br/>
+<hr>
 
 # Plan
 
@@ -36,27 +48,16 @@ who are not familiar with technology or data.
 - **Fetching Structural Metadata**: Use `information_schema` to get schema, table, and column information.
 - **Fetching Usage and Health Metrics**: Use `pg_class` and `pg_total_relation_size()` for row counts and table size. A separate metadata table will be created to track the last updated time.
 
-## 4. Deployment/
+## 4. Deployment
 - **Development**: The backend will be run locally, connecting to the DB via QueryPie.
 - **Production**: The backend will be containerized with Docker and deployed to AWS EKS.
 
-# Progress
-
-- **Project Setup**: Created a monorepo with a Next.js frontend and a FastAPI backend.
-- **Database Connection**: The backend successfully connects to the PostgreSQL database.
-- **Core Feature**: Implemented a page that displays tables from the `out_gov` schema, including their estimated row counts and formatted table sizes (MB/GB).
-- **UX Improvements**:
-  - Separated tables with zero (potentially stale) row counts for easy review.
-  - Added a Korean explanation for the zero-row-count phenomenon.
+<br/><br/>
+<hr>
 
 # Next Steps
 
-- **Table Details Page**: Create a new page that shows the columns and other details for a specific table when a user clicks on it.
+- **Fix Docker Build**: Resolve the `npm install` error occurring during the frontend Docker image build.
 - **Implement Authentication**: Add a secure login system to protect the website.
 - **Visualize Table Relationships**: Begin creating the interactive data map to show how tables are connected.
 
-# Instructions
-- When I ask questions, always explain in plain words first. Do not dump code implementation straight away if not asked.
-- Ask questions if you feel like you don't have enough information to move.
-- Ensure the codes you write are clean, readable, and in accordance with best practices.
-- Write commit messages in Korean.
